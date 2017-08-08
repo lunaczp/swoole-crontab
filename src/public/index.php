@@ -20,11 +20,11 @@ if ($env == "product")
 } else {
     $env = 'dev';
     define('DEBUG', 'on');
-    define('WEBROOT', 'http://crontab.oa.com');
+    define('WEBROOT', 'http://crontab.oa.dev');
 }
 define('ENV_NAME', $env);
 
-define('PUBLIC_PATH', '/data/www/public/');
+define('PUBLIC_PATH', __DIR__ .'/../../../');
 require_once PUBLIC_PATH.'framework/libs/lib_config.php';
 
 Swoole::$php->config->setPath(APPSPATH . '/configs');
